@@ -36,7 +36,7 @@ html {
 
 .prt-work {
     width: 100%;
-    height: 1000px;
+    height: auto;
     background-color: white;
 }
 
@@ -46,8 +46,21 @@ html {
     text-align: center;
 }
 
-.prt-work-projects {
+/* .prt-work-projects {
     text-align: center;
+} */
+
+.col-md {
+    padding: 1rem;
+}
+
+.card {
+    height: 450px;
+    width: 550px;
+}
+.adobe-img {
+    height: 400px;
+    width: 500px;
 }
 
 .abt-me {
