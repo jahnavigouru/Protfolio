@@ -1,0 +1,78 @@
+.main-body {
+    background-color: rgb(235, 246, 246);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.port-nav .port-nav-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.port-nav {
+    padding: 0.56rem 12rem 0.56rem 12rem !important;
+}
+
+.first-wrap {
+    width: 100%;
+    height: 1000px;
+}
+
+.my-name {
+    margin-top: 8rem;
+}
+
+.projects {
+    transition: background 0.3s ease-in,
+                transform 0.5s 0.1s ease-in-out;
+}
+
+.projects:hover {
+    transform: scale(1.2);
+}
+
+.prt-work {
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+}
+
+.prt-work-heading {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.prt-work-projects {
+    text-align: center;
+}
+
+.abt-me {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.abt-me-heading {
+    margin-bottom: 1rem;
+}
+
+.abt-me-img {
+    height: 600px;
+    width: 600px;
+    border: 1px solid;
+    margin-right: 2rem;
+}
+
+.abt-me-interest {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    margin-bottom: 4rem;
+}
+
+.interest-heading {
+    margin-bottom: 4rem;
+}
