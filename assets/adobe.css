@@ -7,3 +7,49 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.adobe-features {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.adobe-feature1 {
+    margin-top: 2rem;
+}
+
+.adobe-feature1-des {
+    margin-bottom: 2rem;
+}
+
+.adobe-feature1-solution {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.adobe-feature1-vid {
+    width: 700px;
+    height: 500px;
+}
+
+.adobe-feature1-explanation {
+    margin-left: 3rem;
+    margin-top: 7rem;
+}
+
+.adobe-features-heading {
+    margin-bottom: 2rem;
+}
+
+.adobe-feature1-implementation {
+    margin-top: 2rem;
+}
+
+.adobe-feature1-jounery-heading {
+    margin-bottom: 2rem;
+}
+
+.adobe-feature1-jounery {
+    margin-left: 250px;
+    height: 50%;
+    width: 50%;
+}
