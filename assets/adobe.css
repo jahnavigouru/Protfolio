@@ -1,3 +1,9 @@
+* {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
 .adobe-poster {
     height: 75vh;
     width: 100%;
@@ -33,7 +39,7 @@
 
 .adobe-feature1-explanation {
     margin-left: 3rem;
-    margin-top: 7rem;
+    margin-top: 6rem;
 }
 
 .adobe-features-heading {
@@ -48,8 +54,48 @@
     margin-bottom: 2rem;
 }
 
-.adobe-feature1-jounery {
-    margin-left: 250px;
+.adobe-feature1-jounery-img1 {
+    height: 200px;
+    width: 312px;
+}
+
+.adobe-feature1-jounery-img2 {
+    height: 200px;
+    width: 400px;
+}
+
+.adobe-feature1-jounery-img-heading {
+    margin-left: 500px;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.adobe-feature1-jounery-part1 {
+    margin-bottom: 5rem;
+}
+
+.adobe-feature1-jounery-part1-col1 {
+    margin-top: 2rem;
+}
+
+.jr1 {
+    margin-left: 6rem;
+}
+
+.RM-img {
+    height: 70%;
+    width: 70%;
+    margin-left: 10rem;
+}
+
+.fop-img {
     height: 50%;
-    width: 50%;
+    width: 40%;
+    margin-left: 24rem;
+}
+
+.adobe-feature2-fo-img-heading {
+    margin-left: 500px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }

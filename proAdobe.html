@@ -13,7 +13,9 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/mdb.min.css" />
+    
 
     <link rel="stylesheet" href="assets/adobe.css">
     <link rel="stylesheet" href="assets/main.css">
@@ -67,8 +69,8 @@
               <li>Airflow</li>
             </div>
           </div>
-          <hr/>
         </div>
+        <hr/>
         <div class="adobe-internship">
           <h3>Internship</h3>
           <p>
@@ -107,7 +109,7 @@
               role="tab"
               aria-controls="ex3-tabs-2"
               aria-selected="false"
-              >Very very very very long link</a
+              >Restart Manager</a
             >
           </li>
         </ul>
@@ -123,16 +125,16 @@
           >
             <div class="adobe-feature1">
               <div class="adobe-feature1-des">
-                <h3>Theme 1: Speed Up Value Delivery</h3>
+                <h3>The Problem</h3>
                 <p>Adobe campaign requires numerous continuous deployments to avoid these rollouts getting scheduled in the same time frame and conflicting with any pre-existing rollouts, the UCO team needed a way to provide PgMs more visibility into the rollout schedule.</p>
                 <p>At present, it was done by some intermediary which isn't feasible given the wide range of rollout adoption.</p>
-                <h5>Business value: </h5>
+                <h5>Business value:</h5>
                 <li>Help PgMs plan better rollouts.</li>
                 <li>Better UX in rollout planning</li>
               </div>
               <hr/>
               <div class="adobe-feature1-solution">
-                <h3>Solution</h3>
+                <h3>The Solution</h3>
                 <div class="row">
                   <video class="adobe-feature1-vid" controls>
                     <source src="img/image001.mp4" type="video/mp4">
@@ -149,12 +151,34 @@
               <hr/>
               <div class="adobe-feature1-implementation">
                 <h3 class="adobe-feature1-jounery-heading">Feature Implementation Process</h3>
-                <p>After understanding UCO's complex architecture, the problem statement, and the impact of scheduling assistant as a feature. I started to implement the feature.</p>
-                <img
-                  src="img/jounery.jpg"
-                  class="img-thumbnail adobe-feature1-jounery"
-                  alt="Hollywood Sign on The Hill"
-                />
+                <p>After understanding UCO's complex architecture, the problem statement, and the impact of scheduling assistant as a feature.</p>
+                <h5 class="adobe-feature1-jounery-img-heading">Execution Flow</h5>
+                <div class="row adobe-feature1-jounery-part1">
+                  <div class="col-6 adobe-feature1-jounery-part1-col1">
+                    <li>Phase 1: Documenting and prototyping different ideas for implementing scheduling assistant and getting them reviewed by the UCO team.</li>
+                    <li>Phase 2: Writing an effective psql query for fetching data of all the rollouts scheduled in a specified week from the database. Three iterations were required for optimizing the time complexity of the algorithm for intelligently showing rollouts in the calendar which was followed by server-side API implantation.</li>
+                  </div>
+                  <div class="col-6">
+                    <img src="img/jounery1.jpg" class="adobe-feature1-jounery-img1 jr1" alt="">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <img src="img/jounery2.jpg" class="adobe-feature1-jounery-img2 jr1" alt="">
+                  </div>
+                  <div class="col-6 adobe-feature1-jounery-part1-col1">
+                    <li>Phase 3: Implementation of UI component and API integration for the assistant using react+typescript.</li>
+                    <li>Phase 4: Testing different edge cases and fixing them.</li>
+                    <li>Phase 5: Launching it to the production where PgMs could finally make use of the feature.</li>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="adobe-feature1-implementation">
+                <h3 class="adobe-feature1-jounery-heading">Feature Jounery</h3>
+                <p>
+                  The entire feature took an active two and a half months (approx.) to complete, starting from February after finishing the Warmup Project.The data is stored in PostgreSQL, the backend is written in Golang and the frontend is in react + typescript, whereas for a weekly view of the calendar we used an open-source dependency called full calendar, and the rest of the components use react-spectrum which is Adobe's design system. And the services were dockerized.
+                </p>
               </div>
             </div>
           </div>
@@ -164,7 +188,39 @@
             role="tabpanel"
             aria-labelledby="ex3-tab-2"
           >
-            Tab 2 content
+              <div class="adobe-feature1">
+                <div class="adobe-feature1-des">
+                  <h3>The Problem</h3>
+                  <p>For business continuity without a fail, specifically for a sprawling infrastructure like Adobe Campaign's, it's important to eliminate manual processes with self-service tooling. So, to ensure the infrastructure adheres to standards without an exception, we need an "automate everything" approach.</p>
+                  <h5>Business value:</h5>
+                  <li>Reduced human errors.</li>
+                  <li>Better customer experience.</li>
+                </div>
+                <hr/>
+                <div class="adobe-feature1-solution">
+                  <h3>The Solution</h3>
+                  <h5>Restart manager</h5>
+                  <p>
+                    Automate the end-to-end process of Campings's clean restart. <br/>
+                    Restart manager is implemented using airflow DAG. Apache Airflow is a workflow management platform for data engineering pipelines and in Airflow, a DAG or a Directed Acyclic Graph - is a collection of all the tasks you want to run, organized in a way that reflects their relationships and dependencies. 
+                    Airflow is written in Python, and workflows are created via Python scripts.<br/>
+                    <li>Restart Manager Dag performs tasks like pre/post checks, mute/unmute alerts, and supports strategies like rolling/parallel.</li>
+                  </p>
+                  <img src="img/Rm.png" class="RM-img" alt="">
+                  <li>This Dag executes these tasks conditionally by calling different airflow operators (like BashOperator and BranchPythonOperator) with different operator arguments for executing the change.</li>
+                </div>
+                <hr/>
+                <div class="adobe-feature1-implementation">
+                  <h3 class="adobe-feature1-jounery-heading">Flash Operator</h3>
+                  <p>
+                    The Flash operator is a generic airflow operator that provides an interface for executing any salt modules with custom parameters.This submits the job using flash API, where the entire job execution process is going to be asynchronous. Later for checking the job execution status, a robust polling mechanism is followed while exponentially backing off on certain HTTP codes like 429(Too Many Requests), 500(Internal Server Error), 502(Bad Gateway), 504(Gateway Timeout)
+                    Parallel/Rolling restart task mentioned above calls Flash Operator for performing a restart on the list of servers provided by the user.
+                  </p>
+                  <h5 class="adobe-feature2-fo-img-heading">The Workflow</h5>
+                  <img src="img/FOp.png" class="fop-img" alt="">
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- Tabs content -->
