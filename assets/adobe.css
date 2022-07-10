@@ -1,85 +1,85 @@
-* {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-  }
+* 
+{
+    font-family: 'Roboto Slab', serif;
+}
 
 .adobe-poster {
     height: 75vh;
     width: 100%;
 }
 
-.adobe-work {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.adobe-features {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.adobe-feature1 {
+.project-main {
     margin-top: 2rem;
 }
 
-.adobe-feature1-des {
-    margin-bottom: 2rem;
+.project-heading {
+    font-weight: 900; 
+    font-size: 3rem; 
+    color: #454444; 
+    margin-bottom: 1rem;
 }
 
-.adobe-feature1-solution {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+.project-type {
+    font-weight: 600; 
+    font-size: 1.125rem;
 }
 
-.adobe-feature1-vid {
+.project-intro {
+    font-size: 1.2rem
+}
+
+.subtitle1 {
+    font-weight: 900; 
+    font-size: 1.55rem; 
+    color: #454444;
+}
+
+.section-divider {
+    margin-top: 1.5rem; 
+    margin-bottom: 1.5rem;
+}
+
+.subtitle {
+    font-weight: 900; 
+    font-size: 2rem; 
+    color: #454444; 
+    margin-bottom: 1.25rem;
+}
+
+.sub-content {
+    font-size: 1.135rem; 
+    font-weight: 600;
+}
+
+.mb-3 {
+    margin-bottom: 1.25rem !important;
+}
+
+.adj-left {
+    margin-left: 2rem;
+}
+
+.adj-size {
+    font-size: 1.25rem !important;
+}
+
+.adj-top {
+    margin-top: 2rem;
+}
+
+.feature-vid {
     width: 700px;
     height: 500px;
 }
 
-.adobe-feature1-explanation {
-    margin-left: 3rem;
-    margin-top: 6rem;
-}
-
-.adobe-features-heading {
-    margin-bottom: 2rem;
-}
-
-.adobe-feature1-implementation {
-    margin-top: 2rem;
-}
-
-.adobe-feature1-jounery-heading {
-    margin-bottom: 2rem;
-}
-
-.adobe-feature1-jounery-img1 {
+.img-jr1 {
     height: 200px;
-    width: 312px;
+    width: 300px;
 }
 
-.adobe-feature1-jounery-img2 {
+.img-jr2 {
     height: 200px;
     width: 400px;
-}
-
-.adobe-feature1-jounery-img-heading {
-    margin-left: 500px;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-.adobe-feature1-jounery-part1 {
-    margin-bottom: 5rem;
-}
-
-.adobe-feature1-jounery-part1-col1 {
-    margin-top: 2rem;
-}
-
-.jr1 {
-    margin-left: 6rem;
 }
 
 .RM-img {
@@ -91,11 +91,5 @@
 .fop-img {
     height: 50%;
     width: 40%;
-    margin-left: 24rem;
-}
-
-.adobe-feature2-fo-img-heading {
-    margin-left: 500px;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
+    margin-left: 29rem;
 }
